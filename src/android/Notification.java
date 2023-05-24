@@ -556,6 +556,7 @@ public class Notification extends CordovaPlugin {
         int currentapiVersion = android.os.Build.VERSION.SDK_INT;
         dlg.create();
         AlertDialog dialog = dlg.show();
+        dialog.setCanceledOnTouchOutside(false);
         dialogs.add(dialog);
         if (currentapiVersion >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
             TextView messageview = (TextView)dialog.findViewById(android.R.id.message);
